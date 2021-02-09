@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-size:3rem;}
+        h1{background:#fff000;}
+        
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        // function sample(){
+        //     console.log("이제야 왔니?")
+        // }
+
+        // sample();
+
+        // function 더하기 (a,b){
+        //     return a+b;
+        // }
+
+        // console.log(더하기(3,4))
+        // document.write(더하기(7,5))
+
+        // document.querySelector('h1').style.height = 더하기(500,29)+'px'
+
+        // var jejudo = {
+        //     a : 100,
+        //     b : 200,
+        //     c : 300,
+
+        //     configMap:{
+        //         deviceSize:null,
+        //         total: 400
+        //     }
+        // } //전역변수의 최소화
+
+        // console.log(jejudo)
+        // console.log(jejudo.b)
+        // console.log(jejudo.configMap.total)
+
+        // //let, const -> 중괄호 기준으로 전역, 로컬
+        // if(true){
+        //     let a = 100;
+        // }
+        // // console.log(a); //접근 불가
+
+        // if(3){
+        //     var ab = 8;
+        // }
+        // console.log(ab); //이게 되네???
+
+        // var person = {};
+        // person.username = '뚱이'; //person 객체의 속성
+        // person.age = 32; 
+        // person.introduce = function(){ //함수인 속성은 메서드(method)
+        //     console.log('안녕 나는' + this.username+'야. 나이는 '
+        //     +person.age+'살이야.');
+        // }
+        // //이름없는 익명함수
+        
+        // // console.log(person.name);
+        // person.introduce();
+
+        // var person2 = {
+        //     username: "Moongchi", //객체 안에서는 쉼표
+        //     age: 1,
+        //     introduce: function(){
+        //         console.log("안녕? 나는 "+this.username+"야. 나이는 "+this.age+"살이야.");
+        //     }
+        // };
+        // person2.introduce();
+
+        //생성자 함수 (constructor)
+        function Person(username, age){
+            this.username = username;
+            this.age = age;
+            this.introduce = function(){
+                console.log("hi, my name is "+this.username+
+                ". and I'm "+this.age+"years old.");
+            } 
+        }
+
+        //인스턴스 (instance)
+        var p1 = new Person("뚱이", 32);
+        var p2 = new Person("뭉치",1);
+        var p3 = Person("지우",21);
+
+        p1.introduce();
+        p2.introduce();
+        p3.introduce();
+
+
+    </script>
+</body>
+</html>
